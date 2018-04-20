@@ -1,0 +1,34 @@
+{
+  "index": "/index.html",
+  "routes": {
+    "/": {
+      "prefix": false
+    }
+  },
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/*"
+      ],
+      "versionedFiles": [
+        "/*.css",
+        "/*.js"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "https://fonts.gstatic.com/**"
+      ]
+    }
+  }]
+}

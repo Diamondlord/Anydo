@@ -2,7 +2,12 @@ mat-icon {
   margin-left: 15px;
 }
 
+.row {
+  display: flex;
+}
 
 .done {
   text-decoration: line-through;
+  color: gray;
+  font-size: 20px;
 }

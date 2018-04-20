@@ -1,4 +1,4 @@
-<div *ngFor="let todoElement of $todoList | async">
+<div class="row" *ngFor="let todoElement of $todoList | async">
   <mat-checkbox
     [ngClass]="{'done': todoElement.checked}"
     [checked] = "todoElement.checked"
