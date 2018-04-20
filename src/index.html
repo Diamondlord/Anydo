@@ -7,8 +7,89 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      background-color: #d6e0e6;
+    }
+
+    .spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -21.5px;
+      margin-top: -21.5px;
+      width: 40px;
+      height: 40px;
+      border-radius: 80px;
+      border: 3px solid transparent;
+      border-left-color: rgba(90, 126, 150, 0.2);
+      border-right-color: rgba(90, 126, 150, 0.2);
+      -webkit-animation: spinnit 1s linear infinite;
+      animation: spinnit 1s linear infinite;
+    }
+
+    .spinner:after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 30px;
+      height: 30px;
+      border-radius: 60px;
+      border: 3px solid transparent;
+      border-left-color: rgba(90, 126, 150, 0.5);
+      border-right-color: rgba(90, 126, 150, 0.5);
+      animation: spinnit 0.5s linear infinite reverse;
+    }
+
+    .spinner:before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      width: 20px;
+      height: 20px;
+      border-radius: 40px;
+      border: 3px solid transparent;
+      border-left-color: rgba(90, 126, 150, 0.8);
+      border-right-color: rgba(90, 126, 150, 0.8);
+    }
+
+    @-webkit-keyframes spinnit {
+      from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinnit {
+      from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <noscript>
+    <h3 style="color: #673ab7; font-family: Helvetica; margin: 2rem;">
+      Sorry, but app is not available without javascript
+    </h3>
+  </noscript>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="Description" content="Angular Application">
+  <meta name="theme-color" content="#FFFFFF">
 </head>
-<body>
-  <app-root></app-root>
+<body class="mat-app-background">
+  <app-root>
+    <div class="spinner"></div>
+  </app-root>
 </body>
 </html>
