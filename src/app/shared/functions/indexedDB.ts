@@ -1,4 +1,4 @@
-let open: any;
+const open = indexedDB.open('AnyDo', 3);
 let registered = false;
 export function initDB() {
   return new Promise((resolve, reject) => {
@@ -6,11 +6,15 @@ export function initDB() {
       const err = 'This browser doesn\'t support IndexedDB';
       reject(err);
     }
-    open = indexedDB.open('AnyDo', 1);
-    open.onupgradeneeded = () => {
+    open.onupgradeneeded = (event) => {
       const db = open.result;
-      const store = db.createObjectStore('todoes', {keyPath: 'id'});
-      store.createIndex('checked', 'checked');
+      if (event.oldVersion < 1) {
+        const store = db.createObjectStore('todoes', {keyPath: 'id'});
+        store.createIndex('checked', 'checked');
+      }
+      if (event.oldVersion < 3) {
+        open.transaction.objectStore('todoes').createIndex('checked', 'checked');
+      }
     };
     open.onsuccess = (event) => {
       registered = true;
