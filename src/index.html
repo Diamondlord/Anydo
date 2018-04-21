@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Todo</title>
+  <title>AnyDo</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="Description" content="TODO list for everyone">
+  <meta name="theme-color" content="#FFFFFF">
   <style>
     body {
       background-color: #d6e0e6;
     }
-
     .spinner {
       position: absolute;
       top: 50%;
@@ -28,7 +29,6 @@
       -webkit-animation: spinnit 1s linear infinite;
       animation: spinnit 1s linear infinite;
     }
-
     .spinner:after {
       content: "";
       position: absolute;
@@ -42,7 +42,6 @@
       border-right-color: rgba(90, 126, 150, 0.5);
       animation: spinnit 0.5s linear infinite reverse;
     }
-
     .spinner:before {
       content: "";
       position: absolute;
@@ -55,7 +54,6 @@
       border-left-color: rgba(90, 126, 150, 0.8);
       border-right-color: rgba(90, 126, 150, 0.8);
     }
-
     @-webkit-keyframes spinnit {
       from {
         -webkit-transform: rotate(0deg);
@@ -66,7 +64,6 @@
         transform: rotate(360deg);
       }
     }
-
     @keyframes spinnit {
       from {
         -webkit-transform: rotate(0deg);
@@ -79,13 +76,10 @@
     }
   </style>
   <noscript>
-    <h3 style="color: #673ab7; font-family: Helvetica; margin: 2rem;">
-      Sorry, but app is not available without javascript
+    <h3 style="color: #673ab7; margin: 2rem;">
+      Sorry, but AnyDo is not available without javascript
     </h3>
   </noscript>
-  <link rel="manifest" href="./manifest.json">
-  <meta name="Description" content="Angular Application">
-  <meta name="theme-color" content="#FFFFFF">
 </head>
 <body class="mat-app-background">
   <app-root>

@@ -1,8 +1,7 @@
-<div class="row" *ngFor="let todoElement of $todoList | async">
-  <mat-checkbox
-    [ngClass]="{'done': todoElement.checked}"
-    [checked] = "todoElement.checked"
-    (change)="clickTodo(todoElement.id, !todoElement.checked)">{{todoElement.text}}
-  </mat-checkbox>
-  <mat-icon (click)="removeTodo(todoElement.id)" color="warn" >delete</mat-icon>
-</div>
+<app-todo-item *ngFor="let todoElement of $todoList | async"
+               [todo]=todoElement
+               (clickTodo)="onClickTodo($event)"
+               (removeTodo)="onRemoveTodo($event)">
+</app-todo-item>
+
+

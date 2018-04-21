@@ -1,0 +1,8 @@
+<div class="row">
+  <mat-checkbox
+    [ngClass]="{'done': todo.checked}"
+    [checked]="todo.checked"
+    (change)="clickTodoEmit(todo)">{{todo.text}}
+  </mat-checkbox>
+  <mat-icon (click)="removeTodoEmit(todo.id)" color="primary">delete</mat-icon>
+</div>

@@ -9,20 +9,24 @@ import {Observable} from 'rxjs/index';
   styleUrls: ['./todo-list.component.css']
 })
 
-export class TodoListComponent implements OnInit{
+export class TodoListComponent implements OnInit {
   $todoList: Observable<Array<TodoElement>>;
 
   constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {
     this.$todoList = this.todoService.getTodoList();
+    // this.$todoList.subscribe(res => {
+    //   console.log('$todoList', res);
+    // });
   }
 
-  removeTodo(id) {
+  onRemoveTodo(id) {
     this.todoService.removeTodo(id);
   }
 
-  clickTodo(id, checked) {
-    this.todoService.clickTodo(id, checked);
+  onClickTodo(todo) {
+    todo.checked = !todo.checked;
+    this.todoService.clickTodo(todo);
   }
 }

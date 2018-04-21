@@ -9,16 +9,18 @@ import { TodoInputComponent } from './components/todo-input/todo-input.component
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { StoreModule,  } from '@ngrx/store';
 import { todoReducer } from './store/reducers/todo';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { TodoItemComponent } from './components/todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoInputComponent,
     TodoListComponent,
-    HeaderComponent
+    HeaderComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
