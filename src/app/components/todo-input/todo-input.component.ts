@@ -14,8 +14,11 @@ export class TodoInputComponent implements OnInit {
   ngOnInit() {}
 
   addTodo(_task) {
-    const task = new TodoElement(generateID(), _task.value, false);
-    this.todoService.addTodo(task);
+    const value = _task.value.trim();
+    if (value.length > 0) {
+      const task = new TodoElement(generateID(), value, 0);
+      this.todoService.addTodo(task);
+    }
     _task.value = '';
   }
 

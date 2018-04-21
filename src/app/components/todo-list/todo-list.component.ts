@@ -26,7 +26,7 @@ export class TodoListComponent implements OnInit {
   }
 
   onClickTodo(todo) {
-    todo.checked = !todo.checked;
+    todo.checked = todo.checked ? 0 : 1;
     this.todoService.clickTodo(todo);
   }
 }

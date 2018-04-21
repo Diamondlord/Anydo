@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TodoService} from '../../services/todo.service';
+import {getTodoesPercentDone} from '../../shared/functions/indexedDB';
 
 @Component({
   selector: 'app-header',
@@ -13,12 +14,20 @@ export class HeaderComponent implements OnInit {
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
-    this.todoService.getTodoList().subscribe( todoes => {
-      const total = todoes.length;
-      const checked = todoes.filter(todo => todo.checked).length;
-      this.$value = total ? checked / total * 100 : 0;
+    this.todoService.getTodoList().subscribe(() => {
+      // const total = todoes.length;
+      // const checked = todoes.filter(_todo => _todo.checked).length;
+      // this.$value = total ? checked / total * 100 : 0;
+      // just for learning indexeddb
+      getTodoesPercentDone().then(
+        (res: number) => {
+          this.$value = res;
+          console.log('getTodoesPercentDone', res);
+        }
+      ).catch(err => console.log(err));
       }
     );
+
   }
 
 }
