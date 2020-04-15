@@ -1,0 +1,79 @@
+{
+  "configVersion": 1,
+  "timestamp": 1586947760982,
+  "index": "Anydo/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "Anydo/assets/icons/icon-128x128.png",
+        "Anydo/assets/icons/icon-144x144.png",
+        "Anydo/assets/icons/icon-152x152.png",
+        "Anydo/assets/icons/icon-192x192.png",
+        "Anydo/assets/icons/icon-384x384.png",
+        "Anydo/assets/icons/icon-512x512.png",
+        "Anydo/assets/icons/icon-72x72.png",
+        "Anydo/assets/icons/icon-96x96.png",
+        "Anydo/assets/img/icon .png",
+        "Anydo/assets/img/icon128.png",
+        "Anydo/assets/img/icon32.png",
+        "Anydo/assets/img/icon64.png",
+        "Anydo/index.html",
+        "Anydo/main-es2015.c8efdb011663d062e5c0.js",
+        "Anydo/main-es5.c8efdb011663d062e5c0.js",
+        "Anydo/polyfills-es2015.479d34ca47f0a8f2774a.js",
+        "Anydo/polyfills-es5.7226ab2f6b91eca4925f.js",
+        "Anydo/runtime-es2015.1eba213af0b233498d9d.js",
+        "Anydo/runtime-es5.1eba213af0b233498d9d.js",
+        "Anydo/styles.733964fb4ed406471e23.css"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Material\\+Icons",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/s\\/materialicons\\/v36\\/flUhRq6tzZclQEJ-Vdg-IuiaDsNc\\.woff2"
+      ]
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "Anydo/assets/icons/icon-128x128.png": "6ca5a90f51770edc24277e8a33e3f95c159ce67c",
+    "Anydo/assets/icons/icon-144x144.png": "95aff7fdcefd79451a08d8f9546a4d8b46548e1e",
+    "Anydo/assets/icons/icon-152x152.png": "89568e4830d2b5f95dd62f90654cd1619482fc65",
+    "Anydo/assets/icons/icon-192x192.png": "a30e825f1488f1abfff160d1d5a6f57b24fbd310",
+    "Anydo/assets/icons/icon-384x384.png": "5b1406ad9f2b7d8dd40850ff299d17aa9e9a8c25",
+    "Anydo/assets/icons/icon-512x512.png": "17564d6c40769138fb2840aeea8c2a22141a9503",
+    "Anydo/assets/icons/icon-72x72.png": "d394cac14fc280b102a140a363487e5f773e31f9",
+    "Anydo/assets/icons/icon-96x96.png": "e0cea3e8cd892046f909b95ba0fd3545d4c5c538",
+    "Anydo/assets/img/icon .png": "654b875bc608522bd6b5fdf9d4c1815893954d8f",
+    "Anydo/assets/img/icon128.png": "2e7cae39312da177e74fe88850320db0166363ca",
+    "Anydo/assets/img/icon32.png": "d311f041686fd55c2775403ded15f4ec01ef6cf8",
+    "Anydo/assets/img/icon64.png": "5f6dfab66ea3c603c048bfa4c68d83628303a014",
+    "Anydo/index.html": "d776b5af64415275e11cbf89e5a08163b1af175d",
+    "Anydo/main-es2015.c8efdb011663d062e5c0.js": "ebfa5a58fc848f61412edd508e003e5ac013f50c",
+    "Anydo/main-es5.c8efdb011663d062e5c0.js": "b5432bcd7c235d030d6ec229e943a980eacc1100",
+    "Anydo/polyfills-es2015.479d34ca47f0a8f2774a.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
+    "Anydo/polyfills-es5.7226ab2f6b91eca4925f.js": "fbae02af3e07434ecb346867d6419f3b2427b7e9",
+    "Anydo/runtime-es2015.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "Anydo/runtime-es5.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "Anydo/styles.733964fb4ed406471e23.css": "4eb4d1fccd4a91cacb2aaabbeaab071359f354c8"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
