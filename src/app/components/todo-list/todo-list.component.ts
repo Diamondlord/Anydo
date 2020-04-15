@@ -26,7 +26,8 @@ export class TodoListComponent implements OnInit {
   }
 
   onClickTodo(todo) {
-    todo.checked = todo.checked ? 0 : 1;
-    this.todoService.clickTodo(todo);
+    const todoChanged = Object.assign({}, todo);
+    todoChanged.checked = todoChanged.checked ? 0 : 1;
+    this.todoService.clickTodo(todoChanged);
   }
 }
