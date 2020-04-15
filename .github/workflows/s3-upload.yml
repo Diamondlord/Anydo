@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm run build --if-present
+      - run: npm run build-prod --if-present
         env:
           CI: true
       - uses: jakejarvis/s3-sync-action@master
