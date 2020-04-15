@@ -1,12 +1,12 @@
-this project was for learning: 
-Angular 6 beta,
-@ngrx/store, 
-indexeddb, 
-pwa
+###this project was for plying with: 
+- Angular,
+- @ngrx/store, 
+- indexeddb, 
+- PWA
 
 
 
 ###deploy to github pages:
-```npm install -g angular-cli-ghpages```
-```npm run build-ghp```
-```ngh```
+```npm install -g angular-cli-ghpages```  
+```npm run build-ghp```  
+```ngh```  
