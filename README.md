@@ -1,4 +1,4 @@
-###this project was for plying with: 
+###this project was for playing with: 
 - Angular,
 - @ngrx/store, 
 - indexeddb, 
