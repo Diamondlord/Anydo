@@ -12,9 +12,6 @@ export function initDB() {
         const store = db.createObjectStore('todoes', {keyPath: 'id'});
         store.createIndex('checked', 'checked');
       }
-      if (event.oldVersion < 3) {
-        open.transaction.objectStore('todoes').createIndex('checked', 'checked');
-      }
     };
     open.onsuccess = (event) => {
       registered = true;
@@ -108,7 +105,3 @@ export function getTodoesPercentDone() {
     }
   });
 }
-
-// function txOnFinish (tx, resolve, reject) {
-//
-// }
