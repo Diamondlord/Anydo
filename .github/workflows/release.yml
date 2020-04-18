@@ -37,11 +37,11 @@ jobs:
 
       - name: Get version from package.json after release step
         id: extractver
-        run: echo "::set-output name=version::$(node -p -e "require(\"./package.json").version\")"
+        run: echo "::set-output name=version::$(node -p -e "require(\"./package.json\").version")"
 
       - name: Create Pull Request with updated package files
         if: steps.initversion.outputs.version != steps.extractver.outputs.version
-        uses: peter-evans/create-pull-request@v2.4.4
+        uses: Diamondlord/create-pull-request@v2.4.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'chore(release): ${{ steps.extractver.outputs.version }}'
