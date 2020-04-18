@@ -36,6 +36,10 @@ jobs:
           GIT_COMMITTER_EMAIL: diamond-bot@diamondlord.dev
         run: npm version patch
 
+      - name: Get version from package.json after release step
+        id: extractver
+        run: echo "::set-output name=version::$(node -p -e "require(\"./package.json\").version")"
+
       - name: Create Release
         if: steps.initversion.outputs.version != steps.extractver.outputs.version
         id: create_release
@@ -58,10 +62,6 @@ jobs:
 #          asset_path: ./my-artifact.zip
 #          asset_name: my-artifact.zip
 #          asset_content_type: application/zip
-
-      - name: Get version from package.json after release step
-        id: extractver
-        run: echo "::set-output name=version::$(node -p -e "require(\"./package.json\").version")"
 
       - name: Create Pull Request with updated package files
         if: steps.initversion.outputs.version != steps.extractver.outputs.version
