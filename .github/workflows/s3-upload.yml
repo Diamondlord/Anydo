@@ -37,8 +37,7 @@ jobs:
           AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
           SOURCE_DIR: 'dist'      # optional: defaults to entire repository
 
-      # Invalidate Cloudfront (this action)
-      - name: invalidate
+      - name: Invalidate Cloudfront
         uses: Diamondlord/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
