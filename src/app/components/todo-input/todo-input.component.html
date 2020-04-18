@@ -3,6 +3,9 @@
     <input matInput type="text" placeholder="New task"
            #task
            (keyup.enter)="addTodo(task)"/>
+    <button mat-button *ngIf="task.value" matSuffix mat-icon-button aria-label="Save" (click)="addTodo(task)">
+      <mat-icon color="primary">done</mat-icon>
+    </button>
     <button mat-button *ngIf="task.value" matSuffix mat-icon-button aria-label="Clear" (click)="task.value=''">
       <mat-icon color="accent">close</mat-icon>
     </button>
