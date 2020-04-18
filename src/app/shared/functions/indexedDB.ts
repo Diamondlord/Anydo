@@ -42,7 +42,7 @@ export function addTodo(todo) {
         reject(event);
       };
     } else {
-      reject('addTodo connection access problem');
+      reject('addTodo indexed db access problem');
     }
   });
 }
@@ -61,7 +61,7 @@ export function removeTodo(id) {
         reject(event);
       };
     } else {
-      reject('removeTodo connection access problem');
+      reject('removeTodo indexed db access problem');
     }
   });
 }
@@ -80,7 +80,7 @@ export function getTodoes() {
         reject(event);
       };
     } else {
-      reject('getTodoes connection access problem');
+      reject('getTodoes indexed db access problem');
     }
   });
 }
@@ -101,7 +101,7 @@ export function getTodoesPercentDone() {
         reject(event);
       };
     } else {
-      reject('getTodoes connection access problem');
+      reject('getTodoes indexed db access problem');
     }
   });
 }
