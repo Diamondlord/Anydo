@@ -27,7 +27,7 @@ jobs:
         run: npm run build-prod --if-present
 
       - name: S3 Sync
-        uses: jakejarvis/s3-sync-action@master
+        uses: Diamondlord/s3-sync-action@master
         with:
           args: --follow-symlinks --delete
         env:
