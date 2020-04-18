@@ -23,7 +23,7 @@ jobs:
 
       - name: Get version from package.json before release step
         id: initversion
-        run: echo "::set-output name=version::$(node -p -e \"require('./package.json').version\")"
+        run: echo "::set-output name=version::$(node -p -e \"require(\"./package.json\").version\")"
 
       - name: Release to NPM and GitHub
         id: release
@@ -37,7 +37,7 @@ jobs:
 
       - name: Get version from package.json after release step
         id: extractver
-        run: echo "::set-output name=version::$(node -p -e \"require('./package.json').version\")"
+        run: echo "::set-output name=version::$(node -p -e \"require(\"./package.json\").version\")"
 
       - name: Create Pull Request with updated package files
         if: steps.initversion.outputs.version != steps.extractver.outputs.version
