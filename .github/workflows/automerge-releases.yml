@@ -1,4 +1,4 @@
-name: Automerge release bump PR
+ame: Automerge release bump PR
 
 on:
   pull_request:
@@ -21,24 +21,17 @@ on:
 
 jobs:
 
-  autoapprove:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Autoapproving
-        uses: Diamondlord/auto-approve-action@v2.0.0
-        if: github.actor == 'diamond-bot'
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-
   automerge:
     needs: [autoapprove]
     runs-on: ubuntu-latest
     steps:
       - name: Automerging
-        uses: Diamondlord/automerge-action@v0.7.5
+        uses: pascalgn/automerge-action@v0.7.5
+        with:
+          args: "--trace"
         if: github.actor == 'diamond-bot'
         env:
-          GITHUB_TOKEN: "${{ secrets.GH_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           GITHUB_LOGIN: diamond-bot
           MERGE_LABELS: ""
           MERGE_METHOD: "squash"
