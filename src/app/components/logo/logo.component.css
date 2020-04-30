@@ -1,0 +1,14 @@
+.logo {
+  width: 293px;
+  height: 72px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 351px) {
+  img {
+    margin-left: 230px;
+  }
+}

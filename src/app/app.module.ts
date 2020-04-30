@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
     TodoInputComponent,
     TodoListComponent,
     HeaderComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
