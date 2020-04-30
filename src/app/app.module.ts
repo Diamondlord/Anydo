@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TodoInputComponent } from './components/todo-input/todo-input.component';
@@ -39,6 +40,7 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
     MatInputModule,
     MatProgressBarModule,
     MatToolbarModule,
+    MatSnackBarModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
