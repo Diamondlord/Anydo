@@ -16,11 +16,11 @@ export class WorkerUpdateService {
       event.preventDefault();
       this.promptEvent = event;
       this.installEnable.next(true);
-      console.info('beforeinstallprompt', event);
+      console.log('beforeinstallprompt', event);
     });
 
     window.addEventListener('appinstalled', (evt) => {
-      console.info('appinstalled', 'installed');
+      console.log('appinstalled', 'installed');
     });
 
     if (swUpdate.isEnabled) {
@@ -28,7 +28,7 @@ export class WorkerUpdateService {
     }
 
     swUpdate.available.subscribe(evt => {
-      console.info('WorkerUpdateService', evt);
+      console.log('WorkerUpdateService', evt);
       const snack = this.snackbar.open('Update Available', 'Reload');
 
       snack
