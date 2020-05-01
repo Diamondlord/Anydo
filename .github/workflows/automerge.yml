@@ -24,9 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Automerging
-        uses: pascalgn/automerge-action@v0.7.5
-        with:
-          args: "--trace"
+        uses: pascalgn/automerge-action@v0.8.1
 #        if: github.actor == 'diamond-bot'
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
