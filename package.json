@@ -1,6 +1,6 @@
 {
-  "name": "Anydo",
-  "version": "0.1.9",
+  "name": "todo",
+  "version": "0.1.10",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
