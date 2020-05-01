@@ -1,5 +1,4 @@
 name: Automerge release bump PR
-
 on:
   pull_request:
     types:
@@ -20,7 +19,6 @@ on:
   status: {}
 
 jobs:
-
   automerge:
 #    needs: [autoapprove]
     runs-on: ubuntu-latest
@@ -32,9 +30,8 @@ jobs:
 #        if: github.actor == 'diamond-bot'
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          GITHUB_LOGIN: diamond-bot
           MERGE_LABELS: ""
-          MERGE_METHOD: "squash"
+          MERGE_METHOD: "rebase"
           MERGE_COMMIT_MESSAGE: "pull-request-title"
-          MERGE_RETRIES: "10"
+          MERGE_RETRIES: "20"
           MERGE_RETRY_SLEEP: "10000"
