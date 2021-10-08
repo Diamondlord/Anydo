@@ -33,7 +33,7 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"
           git commit --allow-empty -m "fix(test): semantic release"
-          npm install -g @semantic-release/git conventional-changelog-conventionalcommits
+          npm install -g semantic-release @semantic-release/git conventional-changelog-conventionalcommits
 
       - name: Release
         env:
