@@ -5,7 +5,6 @@ on:
   push:
     paths:
       - 'src/**'
-      - '*.json'
     branches:
       - master
 
