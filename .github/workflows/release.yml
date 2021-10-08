@@ -65,7 +65,7 @@ jobs:
 
       - name: Create Pull Request with updated package files
         if: steps.initversion.outputs.version != steps.extractver.outputs.version
-        uses: Diamondlord/create-pull-request@v2.4.4
+        uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'chore(release): ${{ steps.extractver.outputs.version }}'
@@ -74,3 +74,4 @@ jobs:
           title: 'chore(release): ${{ steps.extractver.outputs.version }}'
           body: 'Version bump in package.json and package-lock.json for release [${{ steps.extractver.outputs.version }}](https://github.com/${{github.repository}}/releases/tag/v${{ steps.extractver.outputs.version }})'
           branch: version-bump/${{ steps.extractver.outputs.version }}
+          labels: automerge
