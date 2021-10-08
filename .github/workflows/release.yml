@@ -29,7 +29,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - run: |
-         git commit --allow-empty -m "fix(test): semantic release"
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "github-actions"
+        git commit --allow-empty -m "fix(test): semantic release"
 
       - name: Release
         env:
