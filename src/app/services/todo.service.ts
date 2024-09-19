@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {select, Store} from '@ngrx/store';
+import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs/index';
-import { ADD_TODO, CLICK_TODO, GET_TODO_LIST, INIT_TODO, REMOVE_TODO } from '../store/reducers/todo';
+import { ADD_TODO, CLICK_TODO, INIT_TODO, REMOVE_TODO } from '../store/reducers/todo';
 import {addTodo, getTodoes, initDB, removeTodo} from '../shared/functions/indexedDB';
 import { TodoElement } from '../shared/classes/todo-element';
 

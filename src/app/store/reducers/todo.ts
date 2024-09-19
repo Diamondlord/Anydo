@@ -1,5 +1,4 @@
 import {TodoElement} from '../../shared/classes/todo-element';
-import { Action } from '@ngrx/store';
 
 export const ADD_TODO = 'ADD_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
