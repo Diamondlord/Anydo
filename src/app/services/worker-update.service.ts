@@ -20,7 +20,7 @@ export class WorkerUpdateService {
     });
 
     window.addEventListener('appinstalled', (evt) => {
-      console.log('appinstalled', 'installed');
+      console.log('appinstalled', 'installed', evt);
     });
 
     if (swUpdate.isEnabled) {

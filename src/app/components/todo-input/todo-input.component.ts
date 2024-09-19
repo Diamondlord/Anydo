@@ -8,9 +8,8 @@ import {generateID} from '../../shared/functions/generate-id';
   templateUrl: './todo-input.component.html',
   styleUrls: ['./todo-input.component.css']
 })
-export class TodoInputComponent implements OnInit {
+export class TodoInputComponent {
   constructor(private todoService: TodoService) {}
-  ngOnInit() {}
 
   addTodo(_task) {
     const value = _task.value.trim();

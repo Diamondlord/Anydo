@@ -1,14 +1,15 @@
 import {Injectable} from '@angular/core';
 import {select, Store} from '@ngrx/store';
 import {Observable} from 'rxjs/index';
-import {ADD_TODO, CLICK_TODO, INIT_TODO, REMOVE_TODO} from '../store/reducers/todo';
+import { ADD_TODO, CLICK_TODO, GET_TODO_LIST, INIT_TODO, REMOVE_TODO } from '../store/reducers/todo';
 import {addTodo, getTodoes, initDB, removeTodo} from '../shared/functions/indexedDB';
+import { TodoElement } from '../shared/classes/todo-element';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
-  constructor(private _store: Store<any>) {
+  constructor(private _store: Store<{ todo: TodoElement[]}>) {
     initDB().then(() => this.initTodoList());
   }
 
@@ -18,9 +19,14 @@ export class TodoService {
     }).catch(err => console.log('Oooops', err));
   }
 
-  getTodoList(): Observable<any> {
-    return this._store.pipe(select('todo'));
+  getTodoList(): Observable<TodoElement[]> {
+    return this._store.select(state => state.todo);
   }
+
+  // getTodoList(): Observable<TodoElement[]> {
+  //   // return this._store.pipe(select('todo'));
+  //   return this._store.pipe();
+  // }
 
   addTodo(task) {
     addTodo(task).then(

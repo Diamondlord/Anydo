@@ -1,11 +1,13 @@
 import {TodoElement} from '../../shared/classes/todo-element';
+import { Action } from '@ngrx/store';
 
 export const ADD_TODO = 'ADD_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
 export const CLICK_TODO = 'CLICK_TODO';
 export const INIT_TODO = 'INIT_TODO';
+export const GET_TODO_LIST = 'GET_TODO_LIST';
 
-export function todoReducer(state = [], action) {
+export function todoReducer(state: TodoElement[] = [], action) {
   switch (action.type) {
     case ADD_TODO:
       return [
