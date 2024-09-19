@@ -1,3 +1,9 @@
+## [0.6.0](https://github.com/Diamondlord/Anydo/compare/0.5.0...0.6.0) (2024-09-19)
+
+### Features
+
+* redeploy ([1d9e339](https://github.com/Diamondlord/Anydo/commit/1d9e339d72d45788af2a39e7320c8598969080d2))
+
 ## [0.5.0](https://github.com/Diamondlord/Anydo/compare/0.4.0...0.5.0) (2024-09-19)
 
 ### Features
