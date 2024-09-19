@@ -20,22 +20,24 @@ export class WorkerUpdateService {
     });
 
     window.addEventListener('appinstalled', (evt) => {
-      console.log('appinstalled', 'installed');
+      console.log('appinstalled', 'installed', evt);
     });
 
     if (swUpdate.isEnabled) {
       timer(1000, 1000 * 60 * 3).subscribe(() => swUpdate.checkForUpdate());
     }
 
-    swUpdate.available.subscribe(evt => {
-      console.log('WorkerUpdateService', evt);
-      const snack = this.snackbar.open('Update Available', 'Reload');
+    swUpdate.versionUpdates.subscribe(evt => {
+      if (evt.type === 'VERSION_READY') {
+        console.log('WorkerUpdateService', evt);
+        const snack = this.snackbar.open('Update Available', 'Reload');
 
-      snack
-        .onAction()
-        .subscribe(() => {
-          window.location.reload();
-        });
+        snack
+          .onAction()
+          .subscribe(() => {
+            window.location.reload();
+          });
+      }
     });
   }
 }

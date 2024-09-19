@@ -10,7 +10,7 @@ import {Observable} from 'rxjs/index';
 })
 
 export class TodoListComponent implements OnInit {
-  $todoList: Observable<Array<TodoElement>>;
+  $todoList: Observable<TodoElement[]>;
 
   constructor(private todoService: TodoService) {}
 
