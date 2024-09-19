@@ -10,7 +10,6 @@ import {generateID} from '../../shared/functions/generate-id';
 })
 export class TodoInputComponent implements OnInit {
   constructor(private todoService: TodoService) {}
-
   ngOnInit() {}
 
   addTodo(_task) {

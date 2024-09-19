@@ -1,12 +1,13 @@
 <div>
   <mat-form-field class="example-form-field">
-    <input matInput type="text" placeholder="New task"
+    <mat-label>New task</mat-label>
+    <input matInput type="text"
            #task
            (keyup.enter)="addTodo(task)"/>
-    <button mat-button *ngIf="task.value" matSuffix mat-icon-button aria-label="Save" (click)="addTodo(task)">
+    <button  mat-icon-button *ngIf="task.value" matSuffix aria-label="Save" (click)="addTodo(task)">
       <mat-icon color="primary">done</mat-icon>
     </button>
-    <button mat-button *ngIf="task.value" matSuffix mat-icon-button aria-label="Clear" (click)="task.value=''">
+    <button  mat-icon-button *ngIf="task.value" matSuffix aria-label="Clear" (click)="task.value=''">
       <mat-icon color="accent">close</mat-icon>
     </button>
   </mat-form-field>

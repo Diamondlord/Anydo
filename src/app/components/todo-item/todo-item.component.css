@@ -4,6 +4,7 @@ mat-icon {
 
 .row {
   display: flex;
+  align-items: center;
 }
 
 .done {
